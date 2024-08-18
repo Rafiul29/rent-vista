@@ -34,10 +34,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CSRF_TRUSTED_ORIGINS = ['https://rent-vista-7tlr.onrender.com','http://127.0.0.1:8000']
+CSRF_TRUSTED_ORIGINS = ['https://rent-vista.onrender.com','http://127.0.0.1:8000']
 
 # LOGIN_URL="http://127.0.0.1:5500/login.html"
-LOGIN_URL='https://rent-vista-client.vercel.app/login.html'
+LOGIN_URL='https://rent-vista-client-eta.vercel.app/login.html'
 
 # Application definition
 
@@ -62,7 +62,7 @@ CORS_ORIGIN_WHITELIST = (
     "http://localhost:3000",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
-    'https://rent-vista-7tlr.onrender.com'
+    'https://rent-vista.onrender.com'
 )
 
 CORS_ALLOW_ALL_ORIGINS=True
