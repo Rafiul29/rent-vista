@@ -187,7 +187,6 @@ class FavouriteViewSet(viewsets.ModelViewSet):
   serializer_class=FavouriteSerializer
   filter_backends=[FavouriteSpecificAdvertisement]
 
-
 class ReviewForSpecificAdvertisement(filters.BaseFilterBackend):
    def filter_queryset(self,request,query_set,view):
     advertisement_id=request.query_params.get('advertisement_id')
