@@ -33,40 +33,62 @@ Welcome to **RentVista**, a Django REST API backend for a comprehensive rental a
 - **Backend**: Django, Django REST Framework
 - **Database**: SQLite
 
+---
 ## API Endpoints
 
-Backend API Base URL: http://localhost:8000/
-User Authentication
-    POST /api/auth/register - Register a new user
-    POST /api/auth/login/ - User login
-    GET /api/auth/logout/ - User logout
-    GET /users/:id/ - User profile
-    GET /users/role/ - View user roles (admin, users)
+**Backend API Base URL**: `http://localhost:8000/`
 
-Rent Advertisements
-    POST /ads/create/ - Create a new house rent advertisement (users)
-    GET /ads/list/ - List all approved rent advertisements (public)
-    GET /ads/pending/ - View pending advertisement requests (admin)
-    PATCH /ads/approve/:id/ - Approve an advertisement (admin)
-    GET /ads/list/:id/ - Get details of a specific rent advertisement
-    GET /ads/list/?category=<category> - Filter advertisements by category
+### User Authentication
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login/` - User login
+- `GET /api/auth/logout/` - User logout
+- `GET /users/:id/` - User profile
+- `GET /users/role/` - View user roles (admin, users)
 
-Rent Requests
-    POST /requests/create/ - Send a rent request to the advertisement owner
-    GET /requests/list/?advertiser_id=<id> - View all rent requests for a specific advertiser
-    PATCH /requests/accept/:id/ - Accept a rent request (advertiser only)
-    GET /requests/list/?user_id=<user_id> - List rent requests for a specific user
+### Rent Advertisements
+- `POST /ads/create/` - Create a new house rent advertisement (users)
+- `GET /ads/list/` - List all approved rent advertisements (public)
+- `GET /ads/pending/` - View pending advertisement requests (admin)
+- `PATCH /ads/approve/:id/` - Approve an advertisement (admin)
+- `GET /ads/list/:id/` - Get details of a specific rent advertisement
+- `GET /ads/list/?category=<category>` - Filter advertisements by category
 
-Favorites Management
-    GET /favorites/list/ - List all favorite advertisements (for the user)
-    POST /favorites/add/ - Add an advertisement to favorites
-    DELETE /favorites/remove/:id/ - Remove an advertisement from favorites
-    GET /favorites/list/?user_id=<user_id> - User-specific favorite advertisements
+### Rent Requests
+- `POST /requests/create/` - Send a rent request to the advertisement owner
+- `GET /requests/list/?advertiser_id=<id>` - View all rent requests for a specific advertiser
+- `PATCH /requests/accept/:id/` - Accept a rent request (advertiser only)
+- `GET /requests/list/?user_id=<user_id>` - List rent requests for a specific user
 
-Reviews and Ratings
-    POST /reviews/add/ - Add a review and rating to a rent advertisement
-    GET /reviews/list/?ad_id=<ad_id> - List reviews for a specific advertisement
-    GET /reviews/average/?ad_id=<ad_id> - Get average rating for a specific advertisement
+### Favorites Management
+- `GET /favorites/list/` - List all favorite advertisements (for the user)
+- `POST /favorites/add/` - Add an advertisement to favorites
+- `DELETE /favorites/remove/:id/` - Remove an advertisement from favorites
+- `GET /favorites/list/?user_id=<user_id>` - User-specific favorite advertisements
+
+### Reviews and Ratings
+- `POST /reviews/add/` - Add a review and rating to a rent advertisement
+- `GET /reviews/list/?ad_id=<ad_id>` - List reviews for a specific advertisement
+- `GET /reviews/average/?ad_id=<ad_id>` - Get average rating for a specific advertisement
+
+### Menu Category
+- `GET /category/list/` - List all menu categories
+- `GET /category/list/:id` - Get details of a specific menu category
+
+### Menu Browsing
+- `GET /menu/list/` - List all menu items
+- `POST /menu/list/` - Add a new menu item
+- `GET /menu/list/:id/` - Get details of a specific menu item
+- `DELETE /menu/list/:id/` - Delete a specific menu item
+- `GET /menu/list/?search=<search_query>` - Filter the menu by category
+
+### Favourite Menu
+- `GET /menu/favourite/` - List all favourite menu items
+- `POST /menu/favourite/` - Add a menu item to favourites
+- `DELETE /menu/favourite/:id/` - Remove a menu item from favourites
+- `GET /menu/favourite/?user_id=2` - User-specific favourite menu list
+
+
+---
 ## Installation
 
 ## Prerequisites
@@ -111,3 +133,4 @@ python manage.py migrate
 python manage.py runserver
 ```
 The server will be running on http://localhost:8000.
+
