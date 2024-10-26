@@ -1,4 +1,5 @@
 rent_vista/.env
+__pycache__/
 
 # Created by https://www.toptal.com/developers/gitignore/api/django
 # Edit at https://www.toptal.com/developers/gitignore?templates=django
@@ -131,16 +132,14 @@ celerybeat-schedule
 celerybeat.pid
 
 # SageMath parsed files
-*.sage.py
+*.sage.py__pycache__/
 
 # Environments
 .env
-.venv
 env/
-venv/
 ENV/
 env.bak/
-venv.bak/
+
 
 # Spyder project settings
 .spyderproject
