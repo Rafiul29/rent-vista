@@ -40,6 +40,9 @@ CSRF_TRUSTED_ORIGINS = ['https://rent-vista.onrender.com','http://127.0.0.1:8000
 
 # LOGIN_URL="http://127.0.0.1:5500/login.html"
 LOGIN_URL='https://rent-vista-client-eta.vercel.app/login.html'
+SUCCESS_URL='https://rent-vista-client-eta.vercel.app/success.html'
+CANCLE_URL='https://rent-vista-client-eta.vercel.app/cancle.html'
+FAILED_URL='https://rent-vista-client-eta.vercel.app/failed.html'
 
 # Application definition
 
